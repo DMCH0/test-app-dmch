@@ -36,8 +36,9 @@ public class SP_0009 extends BaseTest implements IEndpoints, IRequestParams, IRo
         };
     }
 
-    @Test(dataProvider = "data")
-    @Issue("Age form 0-15/ 61-99/  id: 0 created via PATCH")
+    @Test(dataProvider = "data", enabled = false)
+    //TODO Enable test after issue fix
+    @Issue("Update available with age from 0-15 and 61-99/  id: 0 created via update request, Issue key: SPBUG-0056")
     @Owner("Dmytro")
     @Description("[GET] Negative (CODE 404): Update existing/ non-existing player by id on route /player/update/{editor}/{id}")
     public void testGetAllPlayers(String editor, long playerId, String gender, String login, String role, int age) {

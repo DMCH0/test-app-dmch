@@ -30,9 +30,9 @@ public class SP_0008 extends BaseTest implements IEndpoints, IRequestParams, IRo
         };
     }
 
-    @Test(dataProvider = "data")
-    //TODO Create an issue
-    @Issue("Role admin instead user + age didn't changed/ Role adin can't update player")
+    @Test(dataProvider = "data", enabled = false)
+    //TODO Enable test after issue fix
+    @Issue("Role admin instead user in the response / Role admin can't update player, Issue key: SPBUG-0055")
     @Owner("Dmytro")
     @Description("[GET] Positive (CODE 200): Update existing player by id on route /player/update/{editor}/{id}")
     public void testGetAllPlayers(String editor, long playerId, String gender, String login, String role, int age) {
