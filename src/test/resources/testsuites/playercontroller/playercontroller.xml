@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- Test suite for PlayerController -->
+
+<suite name="APITests" parallel="tests" thread-count="3">
+
+    <test name="PlayerControllerTests">
+        <packages>
+            <package name="com.testapp.playercontroller"/>
+        </packages>
+    </test>
+</suite>
